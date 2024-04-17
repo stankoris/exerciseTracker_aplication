@@ -80,10 +80,10 @@ app.get("/api/users", async (req, res) => {
 });
 
 app.post('/api/users/:_id/exercises', async function (req, res) {
-    var userId = req.params._id;
-    var description = req.body.description;
-    var duration = req.body.duration;
-    var date = req.body.date;
+    let userId = req.params._id;
+    let description = req.body.description;
+    let duration = req.body.duration;
+    let date = req.body.date;
 
     if (!date) {
         date = new Date().toISOString().substring(0, 10);
