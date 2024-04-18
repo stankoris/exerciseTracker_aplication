@@ -79,7 +79,7 @@ app.get("/api/users", async (req, res) => {
     }
 });
 
-app.post('/api/users/:_id/exercises', async function (req, res) {
+app.post('/api/users/:_id/exercises', async (req, res) => {
     let userId = req.params._id;
     let description = req.body.description;
     let duration = req.body.duration;
@@ -117,7 +117,7 @@ app.post('/api/users/:_id/exercises', async function (req, res) {
     }
 });
 
-app.get('/api/users/:_id/logs', async function (req, res) {
+app.get('/api/users/:_id/logs', async (req, res) => {
     const userId = req.params._id;
     let { from, to, limit } = req.query;
     

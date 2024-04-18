@@ -18,7 +18,7 @@
       <form action="/api/users/:_id/exercises" id="exercise-form" method="post">
         <h2>Add exercises</h2>
         <p><code>POST /api/users/:_id/exercises</code></p>
-        <input id="userId" type="text" name=":_id" placeholder=":_id" />
+        <input id="uid" type="text" name=":_id" placeholder=":_id" />
         <input id="description" type="text" name="description" placeholder="description*" />
         <input id="duration" type="text" name="duration" placeholder="duration* (mins.)" />
         <input id="date" type="text" name="date" placeholder="date (yyyy-mm-dd)" />
@@ -30,7 +30,7 @@
       const exerciseForm = document.getElementById("exercise-form");
 
       exerciseForm.addEventListener("submit", () => {
-        const userId = document.getElementById("userId").value;
+        const userId = document.getElementById("uid").value;
         exerciseForm.action = `/api/users/${userId}/exercises`;
 
         exerciseForm.submit();
